@@ -1,5 +1,5 @@
-nhshackday2013
-==============
+Practice Minder
+===============
 
 This Project is the result of an [NHS Hack Day](http://nhshackday.com/) held in 
 Cambridge, UK on the second and third of November 2013.
@@ -21,7 +21,8 @@ instead of looking into geographical corellations, building a tool that lets use
 rearging possible corellations between the available datasets.
 
 
-Hack day notes
+Data Utils
 ==============
 
-Can be found [on HackPad](https://hackpad.com/Open-Prescribing-LLdhiUhyPh2).
+This repository contains useful data transformation and uploading scripts for publicly available 
+NHS Data. 
