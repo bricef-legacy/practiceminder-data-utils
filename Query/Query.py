@@ -78,8 +78,9 @@ def pushToPrac(dic):
     db = getCollection('practices',write=True)
     print 'Start Upload'
     for pracID,pracDic in dic.iteritems():
+        print pracID
+        # r = db.update({'_id':pracID},{'$set': {'metrics':metricDictmp}})
         for key,value in pracDic.iteritems():
-            print pracID
             r = db.update({'_id':pracID},{'$set': {'metrics.'+key:value} })
     print "Finish"
 

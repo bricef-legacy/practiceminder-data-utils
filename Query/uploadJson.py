@@ -1,6 +1,6 @@
 ## File for uploading metrics to practice DB from json file
 import json
-from Query import pushToPrac
+from Query import pushToPrac,editDisplay
 import sys
 
 f =  sys.argv[1]
@@ -14,3 +14,5 @@ with open(f,'rb') as jsonfile:
 	dic = json.load(jsonfile)
 	if checkDic(dic): 
 		pushToPrac(dic)
+editDisplay()
+

@@ -51,7 +51,6 @@ for r in res:
 	except:
 		pass
 
-print out
 with open('Patient.json','wb') as jsonout:
 	json.dump(out,jsonout)
 		
