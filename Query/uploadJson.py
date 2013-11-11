@@ -12,7 +12,7 @@ def checkDic(dic):
 
 with open(f,'rb') as jsonfile:
 	dic = json.load(jsonfile)
-	if checkDic(dic): 
-		pushToPrac(dic)
-editDisplay()
+if checkDic(dic): 
+	pushToPrac(dic)
+# editDisplay()
 

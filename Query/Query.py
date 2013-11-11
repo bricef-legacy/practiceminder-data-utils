@@ -72,7 +72,7 @@ def sumAmounts():
 # 	db = getCollection('practices')
 # 	print db.find({'_id':id})
 
-def pushToPrac(dic):
+def pushToPracMetric(dic):
         ## Function to take a list of dictonaries with id:practice and 
     # metricName and push to practice db
     db = getCollection('practices',write=True)
@@ -82,6 +82,18 @@ def pushToPrac(dic):
         # r = db.update({'_id':pracID},{'$set': {'metrics':metricDictmp}})
         for key,value in pracDic.iteritems():
             r = db.update({'_id':pracID},{'$set': {'metrics.'+key:value} })
+    print "Finish"
+
+def pushToPrac(dic):
+        ## Function to take a list of dictonaries with id:practice and 
+    # metricName and push to practice db
+    db = getCollection('practices',write=True)
+    print 'Start Upload'
+    for pracID,pracDic in dic.iteritems():
+        print pracID
+        # r = db.update({'_id':pracID},{'$set': {'metrics':metricDictmp}})
+        for key,value in pracDic.iteritems():
+            r = db.update({'_id':pracID},{'$set': {key:value} })
     print "Finish"
 
 def testPrac(dic):
